@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-df_deliv = pd.read_csv("deliveries.csv")
-df_match = pd.read_csv("matches.csv")
+df_deliv = pd.read_csv("C:\\Users\\yash.a.mishra\\AppData\\Local\\Programs\\Python\\Python37\\Machine Learning\\Pandas\\ipl\\deliveries.csv")
+df_match = pd.read_csv("C:\\Users\\yash.a.mishra\\AppData\\Local\\Programs\\Python\\Python37\\Machine Learning\\Pandas\\ipl\\matches.csv")
 df_deliv = df_deliv[["match_id", "dismissal_kind"]]
 df_deliv.dropna(axis = 0, inplace = True)
 df_group = pd.DataFrame(index = df_match["season"].unique(),columns = df_deliv["dismissal_kind"].unique())

@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-df_deliv = pd.read_csv("deliveries.csv")
-df_match = pd.read_csv("matches.csv")
+df_deliv = pd.read_csv("C:\\Users\\yash.a.mishra\\AppData\\Local\\Programs\\Python\\Python37\\Machine Learning\\Pandas\\ipl\\deliveries.csv")
+df_match = pd.read_csv("C:\\Users\\yash.a.mishra\\AppData\\Local\\Programs\\Python\\Python37\\Machine Learning\\Pandas\\ipl\\matches.csv")
 df_deliv = df_deliv[["match_id", "batting_team", "batsman", "batsman_runs"]]
 df_deliv = pd.merge(df_deliv, df_match[["match_id", "winner"]], on = "match_id")
 df_deliv = df_deliv.drop(df_deliv[df_deliv.batsman_runs == 0].index)
